@@ -1,0 +1,34 @@
+Algorithm: Bisection Method
+
+Input from User:
+- Interval boundaries a and b
+
+Output:
+- Iterations Completed
+- Root x
+- Corresponding function value f(x)
+
+1. Start
+
+2. Initialize variables:
+   - Set n = 1 (iteration counter)
+   - Set f = 1 
+   - Stopping criteria/tolerance stop 
+   - Define the function as f(x) = x^3 - 2x - 5 
+   
+3. Read input values for a and b
+
+4. Calculate the new root x as (a + b) / 2
+ a. Evaluate the function at the new x
+ b. If f(x) is greater than 0, update b = x
+ c. Else if f(x) is less than 0, update a = x
+ 
+5. Increment the iteration counter n by 1
+
+6. while f(x) is less than stop(tolerance) goto (3) otherwise proceed next.
+
+7. Output final iteration number, x and f(x).
+
+8. Stop
+
+
