@@ -1,0 +1,51 @@
+Algorithm: Linear System Solver using Gauss-Seidel and Jacobi Methods
+
+Output:
+- Iterations Completed
+- Approximate Roots x_i (i = 1,2,3..n)
+
+1. Start
+
+2. - Define utility functions for creating matrix:
+   - Create two separate functions for solving via Gauss-Seidel and Jacobi Methods
+   - Read matrix from input file which has number of equations (n) as the first line.
+
+3. Define the Gauss-Seidel method (gSeidel):
+   a. Initialize variables for the linear system:
+      - i(rows), j(columns), n(variables), k(interation counter) = 1,  error = 1.
+      - Declare double pointers for the coefficient matrix (a), current solution (xold), and right-hand side (b).
+   b. Read the coefficient matrix 'a' and its dimension 'n' from "coeff1.txt" file.
+   c. Prompt the user for an initial guess for the solution vector.
+   d. Perform Gauss-Seidel iterations:
+       - Calculate the new solution 'x' based on the Gauss-Seidel formula.
+       
+				Gauss-Siedel Method
+	Xi(k+1) = [bi – Σn(j=i+1)aijxjk – Σ(i-1)(j=1)aijxjk+1 ] /aii
+
+      - Update the error as the maximum absolute difference between new and old solution components.
+      - Print the iteration details to the console and the output file.
+- Increment the iteration counter 'k'.
+
+
+4. Define the Jacobi method:
+      a. Initialize variables for the linear system:
+      - i(rows), j(columns), n(variables), k(interation counter) = 1,  error = 1.
+      - Declare double pointers for the coefficient matrix (a), current solution (xold), and right-hand side (b).
+   b. Read the coefficient matrix 'a' and its dimension 'n' from "coeff1.txt" file.
+   c. Prompt the user for an initial guess for the solution vector.
+   d. Perform Jacobi iterations:
+      - Calculate the new solution 'x' based on the Jacobi formula.
+      
+				    Jacobi method
+			Xi(k+1) = [bi - Σaijxjk] /aii
+			
+      - Update the error as the maximum absolute difference between new and old solution components.
+      - Print the iteration details to the console and the output file.
+      - Increment the iteration counter 'k'.
+
+5. In the main function:
+   a. Prompt the user to choose a method (Gauss-Seidel, Jacobi, or both).
+   b. Call the corresponding method(s) based on the user's choice.
+
+6. Stop
+
