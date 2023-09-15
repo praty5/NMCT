@@ -1,0 +1,34 @@
+Algorithm: Newton-Raphson Method
+
+Output:
+- Iterations Completed
+- Approximate Root x
+- Corresponding function value f(x)
+
+1. Start
+
+2. - Define the function as fx(x) = x*sin(x) + cos(x)
+   - Define derivative of fx_d(x) = x*cos(x) 
+   - Define the iteration formula as next(x) = x - (fx(x)/fx_d(x))
+
+3. Initialize variables:
+   - Set n = 1 (iteration counter)
+   - Stopping criteria/tolerance stop = 1e-8
+   - Set x = 4.0 * atan(1.0)  // Initial guess
+   - Set f_x = fx(x)  // Evaluate f(x) at initial guess
+   - Set f_x1 = next(x)  // Calculate the next approximation using the next() function
+   
+4. Print iteration header
+
+5. Print iteration details
+   a. Update x = f_x1
+   b. Update f_x = fx(f_x1)
+   c. Update f_x1 = next(f_x1)
+   d. Increment iteration counter n by 1
+
+6. If absolute value of f_x is more than stop(tolerance) goto (5) otherwise proceed next.
+
+7. Output final iteration number, x, and f(x).
+
+8. Stop
+
